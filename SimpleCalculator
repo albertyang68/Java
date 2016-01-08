@@ -1,0 +1,68 @@
+
+public class SimpleCalculator {
+	// A simple calculator that compute +, -, *, / and mod
+	
+	public SimpleCalculator() {
+		
+	}
+	
+	public double add(double a, double b) {
+		
+		double sum = a + b;
+		return sum;
+	}
+	
+	public double substract(double a, double b){
+		
+		double difference = a - b;
+		return difference;
+	}
+	
+	public double multiply(double a, double b){
+		
+		double product = a * b;
+		return product;
+	}
+	
+	public double division(double a, double b){
+		
+		if (b == 0){
+			
+			System.out.println("Error! You are dividing ZERO!");
+			return 0;
+			
+		} else {
+			
+			double divide = a/b;
+			return divide;
+		}
+		
+	}
+	
+	public int modulo(int a, int b){
+		
+		if(b == 0){
+			
+			System.out.println("Error! You are dividing ZERO!");
+			return 0;
+			
+		} else {
+			
+			return modulo(a, b);
+		}
+		
+	}
+	
+	public static void main(String[] arg){
+		
+		SimpleCalculator myCalculator = new SimpleCalculator();
+		
+		System.out.println(myCalculator.add(5, 7));
+		System.out.println(myCalculator.substract(45, 11));
+		
+		
+	}
+	
+	
+
+}
