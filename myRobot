@@ -1,0 +1,72 @@
+
+public class Droid {
+	
+	int batteryLevel;
+	
+
+	public Droid(){
+		
+		batteryLevel = 100;
+		
+	}
+	
+	public void activate(){
+		
+		System.out.println("The Robot has been Activated!");
+		batteryLevel = batteryLevel - 5;
+		System.out.println("Battery Level is " + batteryLevel + " percent.");
+		
+	}
+	
+	public void chargeBattery(int hours){
+		
+		System.out.println("Charging...");
+		batteryLevel = batteryLevel + hours;
+		
+		if (batteryLevel >= 100){
+			
+			batteryLevel = 100;
+			System.out.println("The Battery is FULLY Charged!");
+			
+		} else {
+			
+			System.out.println("Now the Battery Level is " + batteryLevel + " percent.");
+		}
+	}
+	
+	public int checkBatteryLevel(){
+		
+		System.out.println("Battery Level is " + batteryLevel + " percent.");
+		return batteryLevel;
+		
+	}
+	
+	public void hover(double feet){
+		
+		if (feet > 2){
+			
+			System.out.println("Error! 2 feet is TOO HIGH!");
+		
+		} else {
+			/* 
+			   In real world, we can do some math on batteryLevel
+			   by letting hover accept another parameter time and calculate
+			   the charge used 
+			*/
+			System.out.println("Hovering...");
+			batteryLevel = batteryLevel - 20;
+			System.out.println("Battery Level is " + batteryLevel + " percent.");
+			
+		}
+	}
+	
+	public static void main (String[] arg){
+		
+		Droid myRobot = new Droid();
+		myRobot.activate();
+		myRobot.chargeBattery(5);
+		myRobot.hover(0.9);
+		
+	}
+
+}
