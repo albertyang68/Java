@@ -1,11 +1,9 @@
-/* 
-       MagicTrick!
-       
-       No matter what INT choose for myNumber it will produce 0 
-       
-    */ 
+
 public class Mathmagic {
-	
+
+    /* MagicTrick!
+       No matter what INT choose for myNumber it will produce 0 
+    */ 	
 	public Mathmagic(){
 		
 	}
