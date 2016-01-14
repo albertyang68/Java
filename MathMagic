@@ -1,0 +1,48 @@
+/* 
+       MagicTrick!
+       
+       No matter what INT choose for myNumber it will produce 0 
+       
+    */ 
+public class Mathmagic {
+	
+	public Mathmagic(){
+		
+	}
+	
+	public int magic(int myNumber){
+		
+		int stepOne = myNumber * myNumber;
+		int stepTwo = stepOne + myNumber;
+		int stepThree = stepTwo / myNumber;
+		int stepFour = stepThree + 3;
+		int stepFive = stepFour - myNumber;
+		int stepSix = stepFive / 6;
+		return stepSix;
+
+	}
+	
+	public void checker(int ini){
+		// Improvement for CodeAcademy
+		// add checker for certain amount of nums
+	    
+		for(int i = 1; i <= ini; i++){
+			
+			Mathmagic tester = new Mathmagic();
+			int result = tester.magic(i);
+			if (result == 0){
+				System.out.println(i + " follows the Magic Rule");
+			}else {
+				System.out.println("Sorry, " + i + "doesn't follow the Magic Rule");
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+	
+		Mathmagic test = new Mathmagic();
+		test.checker(10);
+		// change 10 into different NUM can test integers from 1 to NUM
+		
+	}
+}
